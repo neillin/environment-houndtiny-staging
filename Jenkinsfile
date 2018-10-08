@@ -13,8 +13,7 @@ pipeline {
       steps {
         container('maven') {
           dir('env') {
-            sh 'env'
-            sh 'jx step helm build'
+            sh 'printenv && jx step helm build'
           }
         }
       }
